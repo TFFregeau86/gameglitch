@@ -7,9 +7,14 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - What did the game look like the first time you ran it?
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
------Hints told me to go higher even when the number was lower and vice versa
-  ---It doesn't let me start a new game when I press new game
-  ---If I put a number above 100 it tells me to go higher, if I put a number below 0 or 1 it tells me to go lower, which relays back to the first bug but it also allows out of range numbers as attempts and gives incorrect hints
+Bug 1 — Hints Are Backwards
+Sometimes the game told me to guess higher when my number was already too high, and told me to guess lower when my number was too low.
+
+Bug 2 — New Game Doesn’t Work
+When I press “New Game,” the game does not reset and I cannot start over properly.
+
+Bug 3 — Out-of-Range Numbers Are Allowed
+The game allows numbers below 1 or above 100. When I enter them, it gives incorrect hints instead of rejecting the input.
 ---
 
 ## 2. How did you use AI as a teammate?

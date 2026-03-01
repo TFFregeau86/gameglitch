@@ -25,9 +25,61 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [ ] The purpose of this game is to create an interactive number-guessing game where the player tries to guess a secret number within a limited number of attempts. The game gives feedback after each guess, showing whether the guess is too high, too low, or correct. It also keeps track of the player’s score and displays a high score to encourage improvement. The project focuses on learning debugging, testing, and managing state in a Streamlit application.
+- [ ] During development and testing, several bugs were discovered:
+
+Incorrect Hint Messages
+The game sometimes gave the wrong hint, telling players to guess higher when they should guess lower, and vice versa.
+
+New Game Reset Issues
+Pressing the “New Game” button did not always reset the game properly. The secret number, score, and attempts were sometimes carried over into the new round.
+
+Unstable Secret Number
+The secret number changed unexpectedly because Streamlit reruns the script whenever the user interacts with the app.
+
+Invalid Input Handling
+The game allowed invalid inputs such as negative numbers, decimals, or extremely large values without properly rejecting them.
+
+Score Calculation Problems
+Players could finish the game with a negative or unfairly low score, even after winning.
+
+History and Attempt Mismatch
+The number of attempts and the guess history did not always match, confusing the debug panel.
+
+Library and Import Errors
+Errors related to PyArrow and missing modules caused the app to crash when displaying certain data.
+
+Testing and Import Issues
+Pytest initially failed due to circular imports and incorrect test setup.
+
+- [ ] To solve these problems, several improvements were made:
+
+Corrected Hint Logic
+The check_guess function was fixed so that it always gives accurate “Too High” and “Too Low” messages based on the secret number.
+
+Proper Game Reset
+When “New Game” is pressed, all session variables (secret, attempts, score, history, and status) are reset, ensuring a fresh start.
+
+Session State for Secret Number
+The secret number is stored in st.session_state, so it is generated only once per game and does not change during reruns.
+
+Improved Input Validation
+The parse_guess function was updated to reject empty inputs, non-numbers, decimals, and values outside the allowed range.
+
+Balanced Scoring System
+The scoring logic was adjusted to reward faster wins and apply consistent penalties for incorrect or invalid guesses.
+
+Synchronized Attempts and History
+Attempts are now only counted for valid guesses, and all guesses are properly stored in history.
+
+Safer Debug Display
+Debug output was changed to use st.text() instead of st.write() to avoid dependency issues with pyarrow.
+
+Fixed Testing Structure
+Test files were cleaned up so they import functions correctly from logic_utils.py without circular dependencies.
+
+Added High Score Feature
+A high score system was implemented using a text file to store and display the best score, improving gameplay motivation.
 
 ## 📸 Demo
 

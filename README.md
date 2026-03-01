@@ -83,8 +83,4 @@ A high score system was implemented using a text file to store and display the b
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
-
-## 🚀 Stretch Features
-
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+- [ ] ![Enhanced Game UI](Screenshot 2026-03-01 115604.png)

@@ -7,6 +7,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - What did the game look like the first time you ran it?
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
+
 Bug 1 — Hints Are Backwards
 Sometimes the game told me to guess higher when my number was already too high, and told me to guess lower when my number was too low.
 

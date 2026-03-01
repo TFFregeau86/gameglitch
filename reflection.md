@@ -16,6 +16,7 @@ When I press “New Game,” the game does not reset, and I cannot start over pr
 
 Bug 3 — Out-of-Range Numbers Are Allowed
 The game allows numbers below 1 or above 100. When I enter them, it gives incorrect hints instead of rejecting the input.
+
 ---
 
 ## 2. How did you use AI as a teammate?

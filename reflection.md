@@ -36,7 +36,9 @@ How I knew bugs were fixed: I used the debug panel and checked if attempts, hist
 One test I ran: I used pytest to test check_guess with values like:
 
 check_guess(50, 50) → “Win”
+
 check_guess(60, 50) → “Too High”
+
 check_guess(150, 50) → “Invalid”
 
 This showed that my logic worked correctly.
